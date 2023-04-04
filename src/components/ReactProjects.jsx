@@ -1,0 +1,62 @@
+import React from "react";
+import classes from "./ReactProjects.module.css";
+import ProjectItem from "./ProjectItem";
+
+const reactProjects = [
+  {
+    id: 1,
+    title: "Millionaire Quiz App",
+    project_link: "https://reactjs-millionaire-quiz-app.netlify.app/",
+    github_link: "https://github.com/ambervector/react-millionaire-game-app",
+    description:
+      "This is a millionaire quiz app that lets the user start the game after entering the name. User gets to answer the onscreen questions. The user either wins or loses the game and gets to earn some winning prize after completing the game. This simple react app is created using useState, useEffect, useContext, components, form, custom components. It also uses the concepts of event handlers, props, custom events, etc.",
+  },
+  {
+    id: 2,
+    title: "Food Ordering App",
+    project_link: "https://reactjs-food-ordering-app.netlify.app/",
+    github_link: "https://github.com/ambervector/reactjs-food-ordering-app",
+    description:
+      "This food ordering react app is created using useState, useEffect, useContext, components, form, custom components. It also uses the concepts of portals, refs, props, custom events, etc.",
+  },
+
+  {
+    id: 3,
+    title: "Log In App",
+    project_link: "https://react-login-page-project.netlify.app/",
+    github_link: "https://github.com/ambervector/react-login-practice",
+    description:
+      "This food ordering react app is created using useState, useEffect, useContext, components, form, custom components. It also uses the concepts of portals, refs, props, custom events, etc.",
+  },
+
+  {
+    id: 4,
+    title: "TODO List App",
+    project_link: "https://reactjs-todo-project-app.netlify.app/",
+    github_link: "https://github.com/ambervector/react-todo-app",
+    description:
+      "This React JS project uses the core react concepts like components, useState Hook, custom Card component, Dynamic List manipulation, props, props.children, event handling, etc.",
+  },
+];
+
+const ReactProjects = () => {
+  return (
+    <>
+      <div className={classes.container}>
+        <h2>ReactJs Projects</h2>
+        {reactProjects.map((project) => (
+          <ProjectItem
+            key={Math.random()}
+            title={project.title}
+            description={project.description}
+            project_link={project.project_link}
+            github_link={project.github_link}
+          />
+        ))}
+      </div>
+    </>
+  );
+};
+
+export default ReactProjects;
+export { reactProjects };

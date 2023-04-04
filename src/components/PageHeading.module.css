@@ -1,0 +1,31 @@
+.container {
+  width: 70%;
+  margin: 10rem auto;
+  animation-name: moveInLeft;
+  animation-duration: 1.5s;
+  animation-timing-function: ease in;
+  backface-visibility: hidden;
+
+  /* animation-delay: 0.5s; */
+}
+
+/* h1:hover {
+  color: red;
+  animation: headingAnimation 0.3s ease-in-out forwards;
+} */
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translate(-100px);
+  }
+
+  80% {
+    transform: translate(40px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
