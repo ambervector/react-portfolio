@@ -9,7 +9,7 @@ const ProjectItem = (props) => {
           <h3 className={classes.project_title}>{props.title}</h3>
           <div className={classes.actions}>
             <a className={classes.btn} href={props.project_link} target="_blank" rel="noreferrer">
-              Project Link
+              Demo Link
             </a>
 
             <a className={classes.btn} href={props.github_link} target="_blank" rel="noreferrer">
