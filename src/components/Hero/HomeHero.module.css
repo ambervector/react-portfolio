@@ -23,10 +23,9 @@
   background-position-y: top;
   border-radius: 100rem;
   border: none;
-
-  box-shadow: 4px 4px 8px 0 rgba(61, 60, 60),
-  -4px -4px 10px 0 rgba(0, 0, 0);
+  box-shadow: 15px 15px 30px 0 rgba(0, 0, 0), -15px -15px 30px 0 rgb(48, 47, 47);
   background-image: url("../../images/FB_IMG_1572607249818.jpg");
+  background-position: top;
 }
 
 .right_container:hover {
