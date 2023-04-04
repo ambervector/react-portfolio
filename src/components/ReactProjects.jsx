@@ -26,7 +26,7 @@ const reactProjects = [
     project_link: "https://react-login-page-project.netlify.app/",
     github_link: "https://github.com/ambervector/react-login-practice",
     description:
-      "This food ordering react app is created using useState, useEffect, useContext, components, form, custom components. It also uses the concepts of portals, refs, props, custom events, etc.",
+      "This project uses the core react concepts like components, props, useState Hook, useEffect Hook, custom Card component, module.css to scope the css, props, local storage for log in session for authentication, event handling, etc.",
   },
 
   {
