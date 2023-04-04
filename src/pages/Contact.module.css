@@ -28,7 +28,12 @@ address {
   padding: 0 2rem;
 }
 
-address a {
+.details a {
   color: white;
   padding: 0 2rem;
+}
+
+.details a:hover {
+  color: rgb(255, 0, 0);
+ 
 }

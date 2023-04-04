@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import classes from "./HomeHero.module.css";
-import profilePicture from "../../images/FB_IMG_1572607249818.jpg";
 import { useSpring, animated } from "react-spring";
 
 const HomeHero = () => {
