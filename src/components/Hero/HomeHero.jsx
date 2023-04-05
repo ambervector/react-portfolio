@@ -3,10 +3,14 @@ import { Link } from "react-router-dom";
 import classes from "./HomeHero.module.css";
 import { useSpring, animated } from "react-spring";
 
+// const initialTextToggleState = {
+//   aboutToggle: false,
+//   workToggle: false,
+//   contactToggle: false,
+// };
+
 const HomeHero = () => {
-  const [aboutText, setAboutText] = useState("Hi,");
-  const [workText, setWorkText] = useState("I am");
-  const [contactText, setContactText] = useState("Amber.");
+  const [textToggleState, setTextToggleState] = useState(false);
 
   //ANIMATION FOR SCALE CHANGE
   const scaleChange = useSpring({
@@ -31,20 +35,12 @@ const HomeHero = () => {
     delay: 500,
   });
 
-  const mouseOverHandler = (event) => {
-    if (event.target.textContent === "Hi,") {
-      setAboutText("About Me");
-    } else if (event.target.textContent === "I am") {
-      setWorkText("My Projects");
-    } else {
-      setContactText("Contact");
-    }
+  const mouseOverHandler = () => {
+    setTextToggleState((prevState) => !prevState);
   };
 
-  const mouseLeaveHandler = (event) => {
-    setAboutText("Hi,");
-    setWorkText("I am");
-    setContactText("Amber.");
+  const mouseLeaveHandler = () => {
+    setTextToggleState((prevState) => !prevState);
   };
 
   return (
@@ -59,7 +55,7 @@ const HomeHero = () => {
                   onMouseOver={mouseOverHandler}
                   onMouseLeave={mouseLeaveHandler}
                 >
-                  {aboutText}
+                  {textToggleState ? `About Me` : `Hi,`}
                 </Link>
               </animated.div>
               <animated.div style={slideFromLeft} className={classes.link_item}>
@@ -68,7 +64,7 @@ const HomeHero = () => {
                   onMouseOver={mouseOverHandler}
                   onMouseLeave={mouseLeaveHandler}
                 >
-                  {workText}
+                  {textToggleState ? `My Projects` : `I am`}
                 </Link>
               </animated.div>
               <animated.div style={scaleChange} className={classes.link_item}>
@@ -77,7 +73,7 @@ const HomeHero = () => {
                   onMouseOver={mouseOverHandler}
                   onMouseLeave={mouseLeaveHandler}
                 >
-                  {contactText}
+                  {textToggleState ? `Contact` : `Amber.`}
                 </Link>
               </animated.div>
             </div>
