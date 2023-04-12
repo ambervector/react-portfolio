@@ -6,14 +6,14 @@
   margin-bottom: 5rem;
   border-radius: 2rem;
   background-color: transparent;
-  box-shadow: 0.4rem 0.4rem 0.8.2rem 0 rgba(61, 60, 60, 0.7),
-    -0.4rem -0.4rem 0.8.2rem 0 rgba(0, 0, 0);
+  box-shadow: 0.4rem 0.4rem 0.8rem 0 rgba(61, 60, 60, 0.7),
+    -0.4rem -0.4rem 0.8rem 0 rgba(0, 0, 0);
   padding: 5rem 5rem;
 }
 
-/* .card:hover {
+.card:hover {
   transform: scale(1.04);
-} */
+}
 
 .left_side,
 .right_side {
