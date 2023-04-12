@@ -17,11 +17,11 @@
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translate(-100px);
+    transform: translate(-10rem);
   }
 
   80% {
-    transform: translate(40px);
+    transform: translate(4rem);
   }
 
   100% {

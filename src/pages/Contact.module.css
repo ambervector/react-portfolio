@@ -2,22 +2,12 @@
 .contact_details {
   width: 70%;
   margin: 10rem auto;
-  /* padding: 10rem; */
-  /* background-image: linear-gradient(
-    to right bottom,
-    red,
-    rgb(212, 134, 134)
-  ) !important;
-  background-size: cover;
-  background-color: transparent;
-  clip-path: (0 0, 100% 0, 95% 100%, 0 100%); */
+
 }
 
 address {
   margin-top: 5rem;
-  /* display: flex; */
   align-items: center;
-  /* justify-content: center; */
 }
 
 .details {

@@ -15,8 +15,8 @@ span {
   /* border: 1px solid red; */
   border-radius: 5rem;
   padding: 1.5rem;
-  box-shadow: 2px 2px 4px 0 rgba(61, 60, 60, 0.7),
-    -2px -2px 2px 0 rgba(0, 0, 0);
+  box-shadow: 0.2rem 0.2rem 0.4rem 0 rgba(61, 60, 60, 0.7),
+    -0.2rem -0.2rem 0.2rem 0 rgba(0, 0, 0);
   position: relative;
 }
 
@@ -37,8 +37,8 @@ span {
 
 .skill_icon:hover {
   transform: scale(1.05);
-  box-shadow: 2px 2px 8px 0 rgba(82, 4, 4, 0.7),
-    -2px -2px 4px 0 rgba(0, 0, 0);
+  box-shadow: 0.2rem 0.2rem 0.8rem 0 rgba(82, 4, 4, 0.7),
+    -0.2rem -0.2rem 0.4rem 0 rgba(0, 0, 0);
 }
 
 .skill_icon:hover::after {

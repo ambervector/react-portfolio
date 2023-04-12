@@ -6,8 +6,8 @@
   margin-bottom: 5rem;
   border-radius: 2rem;
   background-color: transparent;
-  box-shadow: 4px 4px 8px 0 rgba(61, 60, 60, 0.7),
-  -4px -4px 8px 0 rgba(0, 0, 0);
+  box-shadow: 0.4rem 0.4rem 0.8.2rem 0 rgba(61, 60, 60, 0.7),
+    -0.4rem -0.4rem 0.8.2rem 0 rgba(0, 0, 0);
   padding: 5rem 5rem;
 }
 
@@ -33,8 +33,8 @@
   background-color: transparent;
   border: none;
   border-radius: 3rem;
-  box-shadow: 2px 2px 4px 0 rgba(61, 60, 60, 0.7),
-  -2px -2px 2px 0 rgba(0, 0, 0);
+  box-shadow: 0.2rem 0.2rem 0.4rem 0 rgba(61, 60, 60, 0.7),
+    -0.2rem -0.2rem 0.2rem 0 rgba(0, 0, 0);
   font-size: 1.6rem;
   font-weight: 600;
   transition: all 0.3s;
@@ -57,10 +57,11 @@
 }
 
 .actions a {
-transition: all 0.3s;}
+  transition: all 0.3s;
+}
 
 .actions a:hover {
-  transform: translateY(-3px);
+  transform: translateY(-0.3rem);
 }
 
 .actions a:hover::after {
