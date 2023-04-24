@@ -27,11 +27,11 @@
     -1.5rem -1.5rem 3rem 0 rgb(48, 47, 47);
   background-image: url("../../images/FB_IMG_1572607249818.jpg");
   background-position: top;
+  transition: all 0.2s;
 }
 
 .right_container:hover {
   animation: imageAnimation 1s ease;
-  transition: all 1s;
 }
 
 .link_item a {

@@ -2,7 +2,6 @@
 .contact_details {
   width: 70%;
   margin: 10rem auto;
-
 }
 
 address {
@@ -25,5 +24,4 @@ address {
 
 .details a:hover {
   color: rgb(255, 0, 0);
- 
 }

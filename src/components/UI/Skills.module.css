@@ -18,6 +18,7 @@ span {
   box-shadow: 0.2rem 0.2rem 0.4rem 0 rgba(61, 60, 60, 0.7),
     -0.2rem -0.2rem 0.2rem 0 rgba(0, 0, 0);
   position: relative;
+  transition: all 0.2s;
 }
 
 .skill_icon::after {
@@ -32,13 +33,18 @@ span {
   left: 0;
   z-index: -1;
   /* opacity: 0; */
-  transition: all 0.4s;
+  transition: all 0.2s;
 }
 
 .skill_icon:hover {
   transform: scale(1.05);
   box-shadow: 0.2rem 0.2rem 0.8rem 0 rgba(82, 4, 4, 0.7),
     -0.2rem -0.2rem 0.4rem 0 rgba(0, 0, 0);
+}
+
+.skill_icon:hover span {
+  color: red;
+  font-weight: 600;
 }
 
 .skill_icon:hover::after {
