@@ -45,7 +45,6 @@
   text-decoration: none;
   color: rgb(255, 0, 0);
   font-size: 8rem;
-  /* transform: translateY(-3px); */
 }
 
 @keyframes imageAnimation {
@@ -69,8 +68,5 @@
 }
 
 main {
-  /* padding-top: 7%; */
-  /* border: red solid 1px;
-  border-radius: 10%; */
   margin: 5% auto;
 }

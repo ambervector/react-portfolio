@@ -7,4 +7,10 @@ div h2 {
   color: white;
   font-size: 8rem;
   margin-bottom: 8rem;
+  transition: all 0.2s;
+}
+
+div h2:hover {
+  transform: scale(1.1);
+  text-shadow: 0 1.5rem 2rem rgba(155, 1, 1, 0.8);
 }

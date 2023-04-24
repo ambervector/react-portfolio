@@ -3,11 +3,7 @@ import { Link } from "react-router-dom";
 import classes from "./HomeHero.module.css";
 import { useSpring, animated } from "react-spring";
 
-// const initialTextToggleState = {
-//   aboutToggle: false,
-//   workToggle: false,
-//   contactToggle: false,
-// };
+
 
 const HomeHero = () => {
   const [textToggleState, setTextToggleState] = useState(false);
