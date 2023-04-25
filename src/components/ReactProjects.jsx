@@ -32,7 +32,7 @@ const reactProjects = [
   {
     id: 4,
     title: "Form Validation App",
-    project_link: "react-complex-form.web.app",
+    project_link: "https://react-complex-form.web.app",
     github_link: "https://github.com/ambervector/react-complex-form-validation",
     description:
       "This React JS project uses the core react concepts like useReducer Hook, Custom Input Hook, reusable components, useState Hook, different event handling functions, etc. The app uses name, last name and email validity logic inside the custom input hook.",
