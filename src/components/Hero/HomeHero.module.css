@@ -25,7 +25,13 @@
   border: none;
   box-shadow: 1.5rem 1.5rem 3rem 0 rgba(0, 0, 0),
     -1.5rem -1.5rem 3rem 0 rgb(48, 47, 47);
-  background-image: url("../../images/FB_IMG_1572607249818.jpg");
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 0, 0, 0.493),
+      rgba(73, 0, 0, 0.5)
+    ),
+    url("../../images/FB_IMG_1572607249818.jpg");
+  background-blend-mode: overlay;
   background-position: top;
   transition: all 0.2s;
 }
