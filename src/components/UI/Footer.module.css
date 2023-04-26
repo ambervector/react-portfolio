@@ -7,7 +7,7 @@ footer {
 .icon_container {
   padding: 2rem 0;
   width: 100%;
-  /* background-color: rgb(117, 113, 113); */
+  border-top: 1px solid red;
   display: flex;
   flex-direction: row;
   align-items: center;
