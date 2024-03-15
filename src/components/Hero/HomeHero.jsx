@@ -1,9 +1,20 @@
 import React, { useState } from "react";
+import Box from "@mui/material/Box";
+import Paper from "@mui/material/Paper";
+import Grid from "@mui/material/Grid";
+import { styled } from "@mui/material/styles";
+
 import { Link } from "react-router-dom";
 import classes from "./HomeHero.module.css";
 import { useSpring, animated } from "react-spring";
 
-
+// const Item = styled(Paper)(({ theme }) => ({
+//   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
+//   ...theme.typography.body2,
+//   padding: theme.spacing(1),
+//   textAlign: "center",
+//   color: theme.palette.text.secondary,
+// }));
 
 const HomeHero = () => {
   const [textToggleState, setTextToggleState] = useState(false);
@@ -40,10 +51,10 @@ const HomeHero = () => {
   };
 
   return (
-    <>
-      <main className={classes.hero}>
-        <animated.div className={classes.hero__left}>
-          <div className={classes.left_container}>
+    <Box sx={{ flexGrow: 1 }} className={classes.hero}>
+      <Grid container spacing={2}>
+        <Grid item xs={12} md={6} sx={{ paddingTop: { xs: "10rem" } }}>
+          <animated.div>
             <div className={classes.link_items}>
               <animated.div style={scaleChange} className={classes.link_item}>
                 <Link
@@ -73,14 +84,15 @@ const HomeHero = () => {
                 </Link>
               </animated.div>
             </div>
-          </div>
-        </animated.div>
-
-        <animated.div style={scaleChange} className={classes.hero__right}>
-          <div className={classes.right_container}></div>
-        </animated.div>
-      </main>
-    </>
+          </animated.div>
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <animated.div style={scaleChange}>
+            <div className={classes.right_container}></div>
+          </animated.div>
+        </Grid>
+      </Grid>
+    </Box>
   );
 };
 
