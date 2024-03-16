@@ -1,0 +1,24 @@
+.container {
+  width: 100%;
+  margin: 9rem auto;
+  animation-name: moveInLeft;
+  animation-duration: 1.5s;
+  animation-timing-function: ease in;
+  backface-visibility: hidden;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translate(-10rem);
+  }
+
+  80% {
+    transform: translate(4rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}

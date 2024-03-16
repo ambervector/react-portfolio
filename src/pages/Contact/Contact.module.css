@@ -1,0 +1,27 @@
+.contact_text,
+.contact_details {
+  width: 70%;
+  margin: 10rem auto;
+}
+
+address {
+  margin-top: 5rem;
+  align-items: center;
+}
+
+.details {
+  display: flex;
+}
+
+.details p {
+  padding: 0 2rem;
+}
+
+.details a {
+  color: white;
+  padding: 0 2rem;
+}
+
+.details a:hover {
+  color: rgb(255, 0, 0);
+}

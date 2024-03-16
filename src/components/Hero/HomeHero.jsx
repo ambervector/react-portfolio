@@ -3,7 +3,6 @@ import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import { styled } from "@mui/material/styles";
-
 import { Link } from "react-router-dom";
 import classes from "./HomeHero.module.css";
 import { useSpring, animated } from "react-spring";

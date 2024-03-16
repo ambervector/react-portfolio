@@ -1,0 +1,41 @@
+footer {
+  width: 80%;
+  margin-top: 5rem;
+  margin-right: auto;
+  margin-left: auto;
+  /* padding: 5rem 0; */
+}
+
+.icon_container {
+  padding: 2rem 0;
+  width: 100%;
+  border-top: 1px solid red;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.icon:hover {
+  animation: iconsAnimations 0.8s ease-in-out forwards;
+  font-size: 9rem;
+}
+
+@keyframes iconsAnimations {
+  0% {
+    transform: scale(1.5);
+  }
+
+  50% {
+    transform: scale(0.7);
+  }
+
+  100% {
+    transform: scale(1);
+    color: white;
+  }
+}
+
+a svg {
+  font-size: 9rem;
+}

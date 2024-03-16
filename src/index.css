@@ -2,13 +2,10 @@
 
 html {
   font-size: 62.5%;
-  /* height: 90vh; */
+  height: 100vh;
   /* background-color: red; */
 }
 
-#root {
-  height: 100%;
-}
 *,
 *::after,
 *::before {
@@ -21,7 +18,7 @@ html {
 body {
   /* background: #fff; */
   background-color: rgb(17, 17, 17);
-  height: 100vh;
+  height: 100%;
   box-sizing: border-box;
 }
 
@@ -58,4 +55,8 @@ h2 {
 
 p {
   color: white !important;
+}
+
+#root {
+  height: 100%;
 }
