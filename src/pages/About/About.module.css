@@ -1,32 +1,15 @@
 .container {
-  width: 70%;
-  margin: auto !important;
-  /* background-color: rgb(209, 85, 85); */
+  width: 100vw;
+  margin: auto;
 }
 
-.about_heading {
-  margin-top: 10rem;
-}
-
-.heading_intro {
-  margin-bottom: 1.5rem;
-}
-
-h1,
-h2 {
-  color: white;
-  font-size: 10rem;
+h2,
+h3 {
+  width: 100%;
   text-align: center;
 }
 
 h3 {
-  padding: 1rem 0;
-  color: rgb(255, 0, 0) !important;
-  font-size: 3rem;
-}
-
-.container p {
   font-size: 2rem;
-  font-weight: normal;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }

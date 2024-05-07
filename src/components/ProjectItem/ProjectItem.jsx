@@ -8,7 +8,7 @@ import classes from "./ProjectItem.module.css";
 const ProjectItem = (props) => {
   return (
     <>
-      <Grid container spacing={2} columns={16} className={classes.card}>
+      <Grid container className={classes.card}>
         <Grid item xs={12} className={classes.left_side}>
           <h3 className={classes.project_title}>{props.title}</h3>
           <Stack spacing={2} direction="row" className={classes.actions}>

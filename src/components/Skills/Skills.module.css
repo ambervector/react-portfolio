@@ -1,6 +1,8 @@
 .skills_container {
-  width: 100%;
+  width: 100vw;
+  margin: auto;
   padding: 5rem 0;
+  text-align: center;
 }
 
 span {
@@ -8,8 +10,15 @@ span {
   font-size: 3rem;
 }
 
+.skills_icons_container {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
 .skill_icon {
-  max-width: 70rem;
+  max-width: 50%;
   display: flex;
   justify-content: space-between;
   margin: 2rem auto;
@@ -52,4 +61,10 @@ span {
   transform: scaleX(1.1) scaleY(1.1);
   background-color: rgb(255, 0, 0);
   opacity: 0;
+}
+
+@media only screen and (max-width: 1000px) {
+  .skills_container {
+    width: 95vw;
+  }
 }

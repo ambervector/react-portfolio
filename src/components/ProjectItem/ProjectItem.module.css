@@ -16,9 +16,12 @@
   transform: scale(1.04);
 }
 
-.left_side,
+.left_side {
+  width: 40%;
+}
 .right_side {
-  width: 50%;
+  width: 60%;
+  margin-left: 5rem;
 }
 
 .left_side {
