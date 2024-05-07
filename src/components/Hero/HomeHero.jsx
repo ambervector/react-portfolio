@@ -51,7 +51,7 @@ const HomeHero = () => {
 
   return (
     <Box sx={{ flexGrow: 1 }} className={classes.hero}>
-      <Grid container spacing={2}>
+      <Grid container spacing={1}>
         <Grid item xs={12} md={6} sx={{ paddingTop: { xs: "10rem" } }}>
           <animated.div>
             <div className={classes.link_items}>

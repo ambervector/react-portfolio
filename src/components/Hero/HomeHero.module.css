@@ -1,4 +1,6 @@
 .hero {
+  width: 90%;
+  margin: auto;
   padding-top: 6%;
   height: auto;
   max-width: 100%;
@@ -7,10 +9,6 @@
   text-align: center;
 }
 
-/* .left_container {
-  height: 50vh;
-  width: 50%;
-} */
 .right_container {
   height: 50vh;
   width: 50%;
@@ -19,8 +17,8 @@
   background-position-y: top;
   border-radius: 50%;
   border: none;
-  box-shadow: 1.5rem 1.5rem 3rem 0 rgba(0, 0, 0),
-    -1.5rem -1.5rem 3rem 0 rgb(48, 47, 47);
+  /* box-shadow: 0.5rem 0.5rem 0.5rem 0 rgb(202, 9, 9); */
+  /* -1.5rem -1.5rem 3rem 0 rgb(114, 50, 50); */
   background-image: linear-gradient(
       to right,
       rgba(255, 0, 0, 0.493),
@@ -71,4 +69,13 @@
 
 main {
   margin: 5% auto;
+}
+
+@media only screen and (max-width: 800px) {
+  .right_container {
+    margin-top: 8rem;
+    margin-bottom: 5rem;
+    width: 80vw;
+    height: 60vh;
+  }
 }
