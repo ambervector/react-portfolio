@@ -7,15 +7,6 @@ import Contact from "./pages/Contact/Contact";
 import Projects from "./pages/Projects/Projects";
 import Layout from "./components/UI/Layout/Layout";
 import ErrorPage from "./pages/ErrorPage/ErrorPage";
-import { ThemeProvider } from "@emotion/react";
-
-import { createTheme } from "@mui/material";
-
-const darkTheme = createTheme({
-  palette: {
-    mode: "dark",
-  },
-});
 
 const router = createBrowserRouter([
   {
@@ -34,9 +25,7 @@ const router = createBrowserRouter([
 function App() {
   return (
     <>
-      <ThemeProvider theme={darkTheme}>
-        <RouterProvider router={router} />
-      </ThemeProvider>
+      <RouterProvider router={router} />
     </>
   );
 }

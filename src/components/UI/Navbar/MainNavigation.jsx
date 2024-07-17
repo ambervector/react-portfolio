@@ -16,7 +16,6 @@ const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const MainNavigation = ({ setMode, mode }) => {
-  console.log(setMode, mode);
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -54,8 +53,19 @@ const MainNavigation = ({ setMode, mode }) => {
                 </Link>
               </Box>
 
-              <Box>
-                {mode === "dark" ? <BedtimeIcon /> : <LightModeIcon />}
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+                p={5}
+              >
+                {mode === "dark" ? (
+                  <BedtimeIcon sx={{ color: "white" }} />
+                ) : (
+                  <LightModeIcon />
+                )}
 
                 <Switch
                   onChange={(e) => setMode(mode === "dark" ? "light" : "dark")}
@@ -71,17 +81,6 @@ const MainNavigation = ({ setMode, mode }) => {
                   justifyContent: "flex-end",
                 }}
               >
-                {/* <IconButton
-                  size="large"
-                  aria-label="account of current user"
-                  aria-controls="menu-appbar"
-                  aria-haspopup="true"
-                  onClick={handleOpenNavMenu}
-                  color="inherit"
-                  // sx={{ width: "100%" }}
-                >
-                  
-                </IconButton> */}
                 <MenuIcon sx={{ width: "100px", height: "30px" }} />
               </Box>
 
@@ -138,31 +137,6 @@ const MainNavigation = ({ setMode, mode }) => {
                 </nav>
               </Box>
             </animated.header>
-
-            {/* <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: "block", md: "none" },
-              }}
-            >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
-            </Menu> */}
           </Toolbar>
         </Container>
       </AppBar>

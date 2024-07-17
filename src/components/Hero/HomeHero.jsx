@@ -6,14 +6,7 @@ import { styled } from "@mui/material/styles";
 import { Link } from "react-router-dom";
 import classes from "./HomeHero.module.css";
 import { useSpring, animated } from "react-spring";
-
-// const Item = styled(Paper)(({ theme }) => ({
-//   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-//   ...theme.typography.body2,
-//   padding: theme.spacing(1),
-//   textAlign: "center",
-//   color: theme.palette.text.secondary,
-// }));
+import { Typography } from "@mui/material";
 
 const HomeHero = () => {
   const [textToggleState, setTextToggleState] = useState(false);
@@ -50,7 +43,12 @@ const HomeHero = () => {
   };
 
   return (
-    <Box sx={{ flexGrow: 1 }} className={classes.hero}>
+    <Box
+      sx={{ flexGrow: 1 }}
+      className={classes.hero}
+      backgroundColor={"background.default"}
+      color={"text.secondary"}
+    >
       <Grid container spacing={1}>
         <Grid item xs={12} md={6} sx={{ paddingTop: { xs: "10rem" } }}>
           <animated.div>
