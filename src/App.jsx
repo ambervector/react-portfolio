@@ -8,6 +8,8 @@ import Projects from "./pages/Projects/Projects";
 import Layout from "./components/UI/Layout/Layout";
 import ErrorPage from "./pages/ErrorPage/ErrorPage";
 
+// this is for testing
+
 const router = createBrowserRouter([
   {
     path: "/",
