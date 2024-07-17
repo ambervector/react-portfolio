@@ -4,18 +4,19 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Container from "@mui/material/Container";
 import MenuIcon from "@mui/icons-material/Menu";
-import IconButton from "@mui/material/IconButton";
 import { NavLink, Link } from "react-router-dom";
 import classes from "./MainNavigation.module.css";
 import "./MainNavigation.module.css";
 import { useSpring, animated } from "react-spring";
+import LightModeIcon from "@mui/icons-material/LightMode";
+import { Switch } from "@mui/material";
+import BedtimeIcon from "@mui/icons-material/Bedtime";
 
 const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
-const MainNavigation = () => {
-  // const logoLoaderHandler = () => {
-  //   console.log("working!");
+const MainNavigation = ({ setMode, mode }) => {
+  console.log(setMode, mode);
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -51,6 +52,14 @@ const MainNavigation = () => {
                 <Link to="/">
                   <span id="logo"> Amber. </span>
                 </Link>
+              </Box>
+
+              <Box>
+                {mode === "dark" ? <BedtimeIcon /> : <LightModeIcon />}
+
+                <Switch
+                  onChange={(e) => setMode(mode === "dark" ? "light" : "dark")}
+                />
               </Box>
 
               <Box
