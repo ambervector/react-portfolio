@@ -35,8 +35,9 @@ const Root = () => {
   useGSAP(() => {
     gsap.to("#animationBox1", {
       top: window.innerHeight,
-      left: -window.innerWidth,
-      z: -1,
+      left: 0,
+
+      z: -10,
       rotation: 360,
       delay: 0.5,
       duration: 8,
@@ -70,10 +71,10 @@ const Root = () => {
         <Box
           id="animationBox1"
           sx={{
-            position: "absolute",
+            position: "fixed",
             zIndex: -5,
             top: 0,
-            left: window.innerWidth,
+            left: 1150,
             width: 150,
             height: 150,
             borderRadius: "5px",
