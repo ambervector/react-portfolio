@@ -8,6 +8,11 @@ h3 {
   width: 100%;
   text-align: center;
 }
+.aboutText p {
+  margin-bottom: 10px;
+  font-weight: normal;
+  opacity: 0;
+}
 
 h3 {
   font-size: 3rem;

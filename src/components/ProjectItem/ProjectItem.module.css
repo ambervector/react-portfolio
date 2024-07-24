@@ -10,10 +10,13 @@
     -0.4rem -0.4rem 0.8rem 0 rgba(0, 0, 0);
   padding: 5rem 4rem;
   transition: all 0.2s;
+  opacity: 0;
 }
 
 .card:hover {
   transform: scale(1.04);
+  box-shadow: 0.6rem 0.6rem 1rem 0.2rem rgba(201, 28, 28, 0.7),
+    -0.6rem -0.6rem 1rem 1rem rgba(0, 0, 0);
 }
 
 .left_side {
@@ -63,12 +66,10 @@
   transition: all 0.3s;
 }
 
-.actions a {
-  transition: all 0.3s;
-}
-
 .actions a:hover {
   transform: translateY(-0.3rem);
+  box-shadow: 0.4rem 0.4rem 0.6rem 0 rgba(61, 60, 60, 0.7),
+    -0.4rem -0.4rem 0.4rem 0 rgba(0, 0, 0);
 }
 
 .actions a:hover::after {
@@ -98,6 +99,7 @@ h3 {
 
 .right_side p {
   font-size: 15px;
+  color: white !important;
 }
 
 @media only screen and (max-width: 1000px) {

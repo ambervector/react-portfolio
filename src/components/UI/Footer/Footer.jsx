@@ -7,6 +7,8 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import { useSpring, animated } from "react-spring";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/all";
+gsap.registerPlugin(ScrollTrigger);
 
 const iconStyle = { color: "red", fontSize: "4rem" };
 
@@ -24,6 +26,24 @@ const Footer = () => {
         duration: 2,
       }
     );
+  }, []);
+
+  useGSAP(() => {
+    gsap.to(".iconAnimate", {
+      y: 50,
+      rotation: 360,
+      repeat: -1,
+      yoyo: true,
+      scale: 1.5,
+      stagger: {
+        amount: 1,
+        grid: [1, 1],
+        axis: "y",
+        ease: "circ.inOut",
+        from: "center",
+      },
+      duration: 1,
+    });
   }, []);
 
   // const slideUp = useSpring({
@@ -45,12 +65,13 @@ const Footer = () => {
     <>
       <footer id="footer">
         <div className={classes.icon_container}>
-          <a href="#">
+          <a className="iconAnimate" href="#">
             <FacebookIcon className={classes.icon} style={iconStyle}>
               Facebook
             </FacebookIcon>
           </a>
           <a
+            className="iconAnimate"
             href="https://www.linkedin.com/in/mohammad-alam-73516425a/"
             target="_blank"
           >
@@ -58,12 +79,13 @@ const Footer = () => {
               LinkedIn
             </LinkedInIcon>
           </a>
-          <a href="#">
+          <a className="iconAnimate" href="#">
             <TwitterIcon className={classes.icon} style={iconStyle}>
               Twitter
             </TwitterIcon>
           </a>
           <a
+            className="iconAnimate"
             href="https://github.com/ambervector?tab=repositories"
             target="_blank"
           >

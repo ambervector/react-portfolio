@@ -2,7 +2,13 @@
 .contact_details {
   width: 70%;
   margin: 10rem auto;
+  color: white !important;
 }
+
+/* .contact_text p,
+.contact_details p {
+  opacity: 0;
+} */
 
 address {
   margin-top: 5rem;
@@ -24,4 +30,7 @@ address {
 
 .details a:hover {
   color: rgb(255, 0, 0);
+}
+
+.contact_text p {
 }

@@ -1,6 +1,13 @@
 import React from "react";
 import classes from "./ReactProjects.module.css";
 import ProjectItem from "../ProjectItem/ProjectItem";
+import { Box } from "@mui/material";
+import { ScrollTrigger } from "gsap/all";
+import { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const reactProjects = [
   {
@@ -49,19 +56,40 @@ const reactProjects = [
 ];
 
 const ReactProjects = () => {
+  const scrollRef = useRef();
+
+  useGSAP(() => {
+    const refEl = gsap.utils.toArray(scrollRef.current.children);
+    refEl.forEach((refs) => {
+      gsap.to(refs, {
+        opacity: 1,
+        scrollTrigger: {
+          trigger: refs,
+          start: "bottom bottom",
+          end: "top 25%",
+          scrub: true,
+          ease: "power1.inOut",
+        },
+        delay: 0.5,
+        duration: 3,
+      });
+    });
+  }, []);
   return (
     <>
       <div className={classes.container}>
         <h2>ReactJs Projects</h2>
-        {reactProjects.map((project) => (
-          <ProjectItem
-            key={Math.random()}
-            title={project.title}
-            description={project.description}
-            project_link={project.project_link}
-            github_link={project.github_link}
-          />
-        ))}
+        <Box className={classes.projectContainer} ref={scrollRef}>
+          {reactProjects.map((project) => (
+            <ProjectItem
+              key={Math.random()}
+              title={project.title}
+              description={project.description}
+              project_link={project.project_link}
+              github_link={project.github_link}
+            />
+          ))}
+        </Box>
       </div>
     </>
   );

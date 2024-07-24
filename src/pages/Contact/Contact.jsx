@@ -2,10 +2,46 @@ import React from "react";
 import PageHeading from "../../components/PageHeading/PageHeading";
 import classes from "./Contact.module.css";
 import { MdOutlineMailOutline, MdLocationPin } from "react-icons/md";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+import { useRef } from "react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const mailIconStyle = { color: "red", fontSize: "3rem" };
 
 const Contact = () => {
+  // const p1Ref = useRef();
+  // const p2Ref = useRef();
+
+  // useGSAP(() => {
+  //   gsap.to(p1Ref, {
+  //     opacity: 1,
+  //     duration: 3,
+  //     scrollTrigger: {
+  //       trigger: p1Ref,
+  //       start: "bottom bottom",
+  //       end: "top 25%",
+  //       scrub: true,
+  //       ease: "power1.inOut",
+  //     },
+  //   });
+  // }, []);
+
+  // useGSAP(() => {
+  //   gsap.to(p2Ref, {
+  //     opacity: 1,
+  //     duration: 3,
+  //     scrollTrigger: {
+  //       trigger: p2Ref,
+  //       start: "bottom bottom",
+  //       end: "top 25%",
+  //       scrub: true,
+  //       ease: "power1.inOut",
+  //     },
+  //   });
+  // }, []);
   return (
     <>
       <PageHeading heading="Let's make something great together!" />

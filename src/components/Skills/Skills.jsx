@@ -11,17 +11,41 @@ import {
 import { IoLogoGithub } from "react-icons/io";
 import { SiMongodb } from "react-icons/si";
 import classes from "./Skills.module.css";
+import { ScrollTrigger } from "gsap/all";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { useRef } from "react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 // import AiFillHtml5 from "react-icons";
 const skillsStyle = { color: "red", fontSize: "4rem" };
 
 const Skills = () => {
+  const scrollRef = useRef();
+
+  useGSAP(() => {
+    const refEl = gsap.utils.toArray(scrollRef.current.children);
+    refEl.forEach((refs) => {
+      gsap.to(refs, {
+        opacity: 1,
+        scrollTrigger: {
+          trigger: refs,
+          start: "bottom bottom",
+          end: "top 30%",
+          scrub: true,
+          ease: "power1.inOut",
+        },
+        duration: 2,
+      });
+    });
+  }, []);
   return (
     <>
       <div className={classes.skills_container}>
         <h2>Full Stack Developer</h2>
 
-        <div className="skills_icons_container">
+        <div className="skills_icons_container" ref={scrollRef}>
           <div className={classes.skill_icon}>
             <FaHtml5 style={skillsStyle} />
             <span>HTML, HTML5</span>

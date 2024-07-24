@@ -3,8 +3,33 @@ import Box from "@mui/material/Box";
 import classes from "./About.module.css";
 import PageHeading from "../../components/PageHeading/PageHeading";
 import Skills from "../../components/Skills/Skills";
+import { ScrollTrigger } from "gsap/all";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { useRef } from "react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
+  const scrollRef = useRef();
+
+  useGSAP(() => {
+    const refEl = gsap.utils.toArray(scrollRef.current.children);
+    refEl.forEach((refs) => {
+      gsap.to(refs, {
+        opacity: 1,
+        scrollTrigger: {
+          trigger: refs,
+          start: "bottom bottom",
+          end: "top 30%",
+          scrub: true,
+          ease: "power1.inOut",
+        },
+        delay: 0.5,
+        duration: 3,
+      });
+    });
+  }, []);
   const aboutHeading = "I love learning new technologies...";
 
   return (
@@ -17,7 +42,7 @@ const About = () => {
           Hi, I am Amber. I am a self taught programmer who loves to learn and
           use new technnologies.
         </h3>
-        <div className="aboutText">
+        <div className={classes.aboutText} ref={scrollRef}>
           <p>
             I initially started learning HTML, CSS and JavaScript sometime back.
             As I had no degree in this field, I had to depend on Udemy classes

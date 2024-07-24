@@ -1,6 +1,13 @@
 import React from "react";
 import classes from "./HtmlProjects.module.css";
 import ProjectItem from "../ProjectItem/ProjectItem";
+import { ScrollTrigger } from "gsap/all";
+import { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { Box } from "@mui/material";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const htmlProjects = [
   {
@@ -75,18 +82,39 @@ const htmlProjects = [
 ];
 
 const HtmlProjects = () => {
+  const scrollRef = useRef();
+
+  useGSAP(() => {
+    const refEl = gsap.utils.toArray(scrollRef.current.children);
+    refEl.forEach((refs) => {
+      gsap.to(refs, {
+        opacity: 1,
+        scrollTrigger: {
+          trigger: refs,
+          start: "bottom bottom",
+          end: "top 30%",
+          scrub: true,
+          ease: "power1.inOut",
+        },
+        delay: 0.5,
+        duration: 3,
+      });
+    });
+  }, []);
   return (
     <>
       <div className={classes.container}>
         <h2>HTML, CSS and JS Projects</h2>
-        {htmlProjects.map((project) => (
-          <ProjectItem
-            title={project.title}
-            description={project.description}
-            project_link={project.project_link}
-            github_link={project.github_link}
-          />
-        ))}
+        <Box ref={scrollRef}>
+          {htmlProjects.map((project) => (
+            <ProjectItem
+              title={project.title}
+              description={project.description}
+              project_link={project.project_link}
+              github_link={project.github_link}
+            />
+          ))}
+        </Box>
       </div>
     </>
   );
