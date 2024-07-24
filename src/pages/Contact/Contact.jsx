@@ -6,12 +6,44 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useRef } from "react";
+import { Box } from "@mui/material";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const mailIconStyle = { color: "red", fontSize: "3rem" };
 
 const Contact = () => {
+  const scrollRef = useRef();
+
+  useGSAP(() => {
+    const refEl = gsap.utils.toArray(scrollRef.current.children);
+    refEl.forEach((refs) => {
+      gsap.fromTo(
+        refs,
+        {
+          opacity: 0,
+          x: 100,
+          y: 100,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          x: 0,
+          scrollTrigger: {
+            trigger: refs,
+            start: "bottom bottom",
+            end: "top 30%",
+            scrub: true,
+            ease: "power1.inOut",
+          },
+        }
+      );
+    });
+  }, []);
+
+  // useGSAP(() => {
+  //   gsap.fromTo("p");
+  // }, []);
   // const p1Ref = useRef();
   // const p2Ref = useRef();
 
@@ -45,34 +77,33 @@ const Contact = () => {
   return (
     <>
       <PageHeading heading="Let's make something great together!" />
-      <div className={classes.contact_text}>
+      <Box className={classes.contact_text} ref={scrollRef}>
         <h2>Contact</h2>
-        <p>
+        <p className={` ${classes.translateY10}`}>
           I am seeking out opportunities to work with companies / individuals /
           agencies to bring my collective experience to the table. I want to use
           my acquired skills to solve real business-problems in a way that
           optimizes everyone's experience and knowledge.
         </p>
-        <p></p>
-      </div>
-      <div className={classes.contact_details}>
-        <p>Feel free to reach out through any of the platforms below:</p>
+        <div className={classes.contact_details}>
+          <p>Feel free to reach out through any of the platforms below:</p>
 
-        <address>
-          <div className={classes.details}>
-            <MdOutlineMailOutline style={mailIconStyle} />
-            <a href="mailto: amberalam.3101@gmail.com">
-              amberalam.3101@gmail.com
-            </a>
-          </div>
-          <br />
+          <address>
+            <div className={classes.details}>
+              <MdOutlineMailOutline style={mailIconStyle} />
+              <a href="mailto: amberalam.3101@gmail.com">
+                amberalam.3101@gmail.com
+              </a>
+            </div>
+            <br />
 
-          <div className={classes.details}>
-            <MdLocationPin style={mailIconStyle} />
-            <p>Bengaluru</p>
-          </div>
-        </address>
-      </div>
+            <div className={classes.details}>
+              <MdLocationPin style={mailIconStyle} />
+              <p>Bengaluru</p>
+            </div>
+          </address>
+        </div>
+      </Box>
     </>
   );
 };

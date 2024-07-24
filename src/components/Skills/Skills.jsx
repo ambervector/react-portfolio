@@ -27,17 +27,27 @@ const Skills = () => {
   useGSAP(() => {
     const refEl = gsap.utils.toArray(scrollRef.current.children);
     refEl.forEach((refs) => {
-      gsap.to(refs, {
-        opacity: 1,
-        scrollTrigger: {
-          trigger: refs,
-          start: "bottom bottom",
-          end: "top 30%",
-          scrub: true,
-          ease: "power1.inOut",
+      gsap.fromTo(
+        refs,
+        {
+          opacity: 0,
+          x: 100,
+          y: 100,
         },
-        duration: 2,
-      });
+        {
+          opacity: 1,
+          x: 0,
+          y: 0,
+          scrollTrigger: {
+            trigger: refs,
+            start: "bottom bottom",
+            end: "top 30%",
+            scrub: true,
+            ease: "power1.inOut",
+          },
+          duration: 2,
+        }
+      );
     });
   }, []);
   return (

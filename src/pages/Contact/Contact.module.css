@@ -5,11 +5,25 @@
   color: white !important;
 }
 
+.contact_details {
+  padding: 5rem;
+  background-color: transparent;
+  border-radius: 5rem;
+  box-shadow: 0.4rem 0.4rem 0.4rem 0 rgba(67, 6, 6, 0.7),
+    -0.4rem -0.4rem 0.8rem 0 rgba(0, 0, 0);
+}
+
 /* .contact_text p,
 .contact_details p {
   opacity: 0;
 } */
 
+.opacityZero {
+  opacity: 0;
+}
+.translateY10 {
+  transform: translateY(10rem);
+}
 address {
   margin-top: 5rem;
   align-items: center;
