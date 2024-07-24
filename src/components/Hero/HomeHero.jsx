@@ -44,9 +44,9 @@ const HomeHero = () => {
 
   return (
     <Box
-      sx={{ flexGrow: 1 }}
+      sx={{ flexGrow: 1, zIndex: 2 }}
       className={classes.hero}
-      backgroundColor={"background.default"}
+      // backgroundColor={"background.default"}
       color={"text.secondary"}
     >
       <Grid container spacing={1}>
