@@ -35,6 +35,7 @@ const Footer = () => {
       repeat: -1,
       yoyo: true,
       scale: 1.5,
+      opacity: 0,
       stagger: {
         amount: 1,
         grid: [1, 1],
@@ -42,6 +43,13 @@ const Footer = () => {
         ease: "circ.inOut",
         from: "center",
       },
+      duration: 2,
+    });
+  }, []);
+
+  useGSAP(() => {
+    gsap.to(".MuiSvgIcon-root", {
+      color: "#ffffff",
       duration: 1,
     });
   }, []);
