@@ -41,7 +41,7 @@ const Root = () => {
       rotation: 360,
       opacity: 1,
       delay: 0.5,
-      duration: 8,
+      duration: 4,
       repeat: -10,
       yoyo: true,
       scale: 1.5,
@@ -82,7 +82,8 @@ const Root = () => {
             height: 150,
             borderRadius: "5px",
             backgroundColor: "#1d1b1b",
-            boxShadow: "20px 20px 60px #e8e8e8, -20px -20px 60px #e8e8e8",
+            boxShadow:
+              "2rem 2rem 6rem 2rem #eb4540, 2rem 2rem 6rem 2rem rgba(0, 0, 0)",
           }}
         ></Box>
         <Footer />

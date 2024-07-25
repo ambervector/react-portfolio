@@ -39,10 +39,10 @@ const reactProjects = [
   {
     id: 4,
     title: "Form Validation App",
-    project_link: "https://react-complex-form.web.app",
-    github_link: "https://github.com/ambervector/react-complex-form-validation",
+    project_link: "https://react-personal-info.vercel.app/",
+    github_link: "https://github.com/ambervector/react-personal-info",
     description:
-      "This React JS project uses the core react concepts like useReducer Hook, Custom Input Hook, reusable components, useState Hook, different event handling functions, etc. The app uses name, last name and email validity logic inside the custom input hook.",
+      "This React JS project uses Material UI core react concepts and customizations. It also uses different animation techniques, multi step component and form validation logics. It also uses the useReducer Hook, Custom Input Hook, reusable components, useState Hook, different event handling functions, etc.",
   },
 
   {
