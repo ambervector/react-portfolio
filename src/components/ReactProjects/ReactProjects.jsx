@@ -29,11 +29,11 @@ const reactProjects = [
 
   {
     id: 3,
-    title: "Log In App",
-    project_link: "https://react-login-page-project.netlify.app/",
-    github_link: "https://github.com/ambervector/react-login-practice",
+    title: "React MUI Social Demo",
+    project_link: "https://react-mui-social-mu.vercel.app/",
+    github_link: "https://github.com/ambervector/react-mui-social",
     description:
-      "This project uses the core react concepts like components, props, useState Hook, useEffect Hook, custom Card component, module.css to scope the css, props, local storage for log in session for authentication, event handling, etc.",
+      "This project uses the core React MUI components, props, useState Hook, useEffect Hook, custom Card component, module.css to scope the css, props. The app uses different MUI components like Appbar, Paper, Box, Cards, Typography, etc",
   },
 
   {
