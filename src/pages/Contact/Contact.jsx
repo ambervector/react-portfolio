@@ -14,6 +14,11 @@ const mailIconStyle = { color: "red", fontSize: "3rem" };
 
 const Contact = () => {
   const scrollRef = useRef();
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth", // Optional for smooth scrolling
+  });
 
   useGSAP(() => {
     const refEl = gsap.utils.toArray(scrollRef.current.children);
@@ -41,39 +46,6 @@ const Contact = () => {
     });
   }, []);
 
-  // useGSAP(() => {
-  //   gsap.fromTo("p");
-  // }, []);
-  // const p1Ref = useRef();
-  // const p2Ref = useRef();
-
-  // useGSAP(() => {
-  //   gsap.to(p1Ref, {
-  //     opacity: 1,
-  //     duration: 3,
-  //     scrollTrigger: {
-  //       trigger: p1Ref,
-  //       start: "bottom bottom",
-  //       end: "top 25%",
-  //       scrub: true,
-  //       ease: "power1.inOut",
-  //     },
-  //   });
-  // }, []);
-
-  // useGSAP(() => {
-  //   gsap.to(p2Ref, {
-  //     opacity: 1,
-  //     duration: 3,
-  //     scrollTrigger: {
-  //       trigger: p2Ref,
-  //       start: "bottom bottom",
-  //       end: "top 25%",
-  //       scrub: true,
-  //       ease: "power1.inOut",
-  //     },
-  //   });
-  // }, []);
   return (
     <>
       <PageHeading heading="Let's make something great together!" />

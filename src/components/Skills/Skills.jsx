@@ -50,13 +50,14 @@ const Skills = () => {
       );
     });
   }, []);
+
   return (
     <>
       <div className={classes.skills_container}>
         <h2>Full Stack Developer</h2>
 
         <div className="skills_icons_container" ref={scrollRef}>
-          <div className={classes.skill_icon}>
+          <div className={classes.skill_icon} id="Html">
             <FaHtml5 style={skillsStyle} />
             <span>HTML, HTML5</span>
           </div>

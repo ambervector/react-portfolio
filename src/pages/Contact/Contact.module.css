@@ -13,20 +13,16 @@
     -0.6rem -0.6rem 1rem 1rem rgba(0, 0, 0);
 }
 
-/* .contact_text p,
-.contact_details p {
-  opacity: 0;
-} */
-
 .opacityZero {
   opacity: 0;
 }
+
 .translateY10 {
   transform: translateY(10rem);
 }
+
 address {
   margin-top: 5rem;
-  align-items: center;
 }
 
 .details {
@@ -44,7 +40,4 @@ address {
 
 .details a:hover {
   color: rgb(255, 0, 0);
-}
-
-.contact_text p {
 }

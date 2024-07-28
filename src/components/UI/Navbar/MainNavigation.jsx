@@ -11,13 +11,14 @@ import { useSpring, animated } from "react-spring";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import { Switch } from "@mui/material";
 import BedtimeIcon from "@mui/icons-material/Bedtime";
-
 const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const MainNavigation = ({ setMode, mode }) => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+
+ 
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -43,7 +44,13 @@ const MainNavigation = ({ setMode, mode }) => {
 
   return (
     <>
-      <AppBar position="static">
+      <AppBar
+        position="static"
+        sx={{
+          backgroundColor: "#000000",
+          background: "transparent",
+        }}
+      >
         <Container maxWidth="xl">
           <Toolbar sx={{ paddingTop: "2rem" }}>
             <animated.header style={scaleChange}>

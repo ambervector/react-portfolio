@@ -12,6 +12,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
   const scrollRef = useRef();
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth", // Optional for smooth scrolling
+  });
 
   useGSAP(() => {
     const refEl = gsap.utils.toArray(scrollRef.current.children);
