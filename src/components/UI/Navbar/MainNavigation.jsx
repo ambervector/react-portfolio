@@ -5,36 +5,23 @@ import Toolbar from "@mui/material/Toolbar";
 import Container from "@mui/material/Container";
 import MenuIcon from "@mui/icons-material/Menu";
 import { NavLink, Link } from "react-router-dom";
+import { useState } from "react";
 import classes from "./MainNavigation.module.css";
 import "./MainNavigation.module.css";
 import { useSpring, animated } from "react-spring";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import { Switch } from "@mui/material";
 import BedtimeIcon from "@mui/icons-material/Bedtime";
+import SmallMenu from "../SmallMenu/SmallMenu";
+
 const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const MainNavigation = ({ setMode, mode }) => {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
-
- 
-
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
+  const [open, setOpen] = useState(false);
+  const handleClose = () => {
+    setOpen((prevState) => !prevState);
   };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
-  // };
 
   const scaleChange = useSpring({
     from: { opacity: "0", marginTop: "-200px" },
@@ -59,7 +46,6 @@ const MainNavigation = ({ setMode, mode }) => {
                   <span id="logo"> Amber. </span>
                 </Link>
               </Box>
-
               <Box
                 sx={{
                   display: "flex",
@@ -78,7 +64,6 @@ const MainNavigation = ({ setMode, mode }) => {
                   onChange={(e) => setMode(mode === "dark" ? "light" : "dark")}
                 />
               </Box>
-
               <Box
                 sx={{
                   flexGrow: 1,
@@ -88,9 +73,11 @@ const MainNavigation = ({ setMode, mode }) => {
                   justifyContent: "flex-end",
                 }}
               >
-                <MenuIcon sx={{ width: "100px", height: "30px" }} />
+                <MenuIcon
+                  onClick={handleClose}
+                  sx={{ width: "100px", height: "30px" }}
+                />
               </Box>
-
               <Box
                 sx={{
                   flexGrow: 1,
@@ -143,6 +130,7 @@ const MainNavigation = ({ setMode, mode }) => {
                   </ul>
                 </nav>
               </Box>
+              <SmallMenu open={open} handleClose={handleClose} />
             </animated.header>
           </Toolbar>
         </Container>

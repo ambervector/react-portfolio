@@ -16,6 +16,8 @@ header {
   margin-left: 5rem;
 }
 
+
+
 @keyframes logoAnimation {
   0% {
     transform: translateX(0rem);

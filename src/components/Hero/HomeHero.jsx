@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import classes from "./HomeHero.module.css";
 import { useSpring, animated } from "react-spring";
 import { Typography } from "@mui/material";
+import RotatingCube from "./RotatingCube";
 
 const HomeHero = () => {
   const [textToggleState, setTextToggleState] = useState(false);
@@ -86,6 +87,8 @@ const HomeHero = () => {
         <Grid item xs={12} md={6}>
           <animated.div style={scaleChange}>
             <div className={classes.right_container}></div>
+
+            {/* <RotatingCube /> */}
           </animated.div>
         </Grid>
       </Grid>

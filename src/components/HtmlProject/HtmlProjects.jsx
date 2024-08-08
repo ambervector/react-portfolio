@@ -100,7 +100,7 @@ const HtmlProjects = () => {
           y: 0,
           scrollTrigger: {
             trigger: refs,
-            start: "bottom bottom",
+            start: "top bottom",
             end: "top 30%",
             scrub: true,
             ease: "power1.inOut",

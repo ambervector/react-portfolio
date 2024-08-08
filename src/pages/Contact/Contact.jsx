@@ -6,11 +6,11 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useRef } from "react";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const mailIconStyle = { color: "red", fontSize: "3rem" };
+const mailIconStyle = { color: "red", fontSize: "2rem" };
 
 const Contact = () => {
   const scrollRef = useRef();
@@ -27,8 +27,8 @@ const Contact = () => {
         refs,
         {
           opacity: 0,
-          x: 100,
-          y: 100,
+          x: 50,
+          y: 50,
         },
         {
           opacity: 1,
@@ -50,31 +50,41 @@ const Contact = () => {
     <>
       <PageHeading heading="Let's make something great together!" />
       <Box className={classes.contact_text} ref={scrollRef}>
-        <h2>Contact</h2>
+        <Typography
+          variant="h2"
+          sx={{ margin: "4rem auto", fontWeight: "900", fontSize: "8rem" }}
+        >
+          Contact
+        </Typography>
         <p className={` ${classes.translateY10}`}>
           I am seeking out opportunities to work with companies / individuals /
           agencies to bring my collective experience to the table. I want to use
           my acquired skills to solve real business-problems in a way that
           optimizes everyone's experience and knowledge.
         </p>
-        <div className={classes.contact_details}>
-          <p>Feel free to reach out through any of the platforms below:</p>
-
+        <Box className={classes.contact_details}>
+          <p
+            style={{
+              marginBottom: "2rem",
+            }}
+          >
+            Feel free to reach out through any of the platforms below:
+          </p>
           <address>
-            <div className={classes.details}>
+            <Box className={classes.details}>
               <MdOutlineMailOutline style={mailIconStyle} />
               <a href="mailto: amberalam.3101@gmail.com">
                 amberalam.3101@gmail.com
               </a>
-            </div>
+            </Box>
             <br />
 
-            <div className={classes.details}>
+            <Box className={classes.details}>
               <MdLocationPin style={mailIconStyle} />
               <p>Bengaluru</p>
-            </div>
+            </Box>
           </address>
-        </div>
+        </Box>
       </Box>
     </>
   );

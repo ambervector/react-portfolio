@@ -19,6 +19,7 @@ body {
   /* background: #fff; */
   /* background-color: "#121212"; */
   height: 100%;
+  width: 100vw;
   box-sizing: border-box;
 }
 

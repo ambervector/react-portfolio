@@ -1,6 +1,5 @@
 import React from "react";
 import Stack from "@mui/material/Stack";
-import Box from "@mui/material/Grid";
 import Grid from "@mui/material/Box";
 
 import classes from "./ProjectItem.module.css";

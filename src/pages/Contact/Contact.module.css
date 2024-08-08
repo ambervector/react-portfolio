@@ -1,7 +1,12 @@
-.contact_text,
 .contact_details {
   width: 70%;
-  margin: 10rem auto;
+  margin: 8rem auto;
+  color: white !important;
+}
+
+.contact_text {
+  width: 70%;
+  margin: auto;
   color: white !important;
 }
 
@@ -11,6 +16,7 @@
   border-radius: 5rem;
   box-shadow: 0.6rem 0.6rem 1rem 0.2rem rgba(201, 28, 28, 0.7),
     -0.6rem -0.6rem 1rem 1rem rgba(0, 0, 0);
+  margin: 15rem auto;
 }
 
 .opacityZero {
@@ -21,23 +27,42 @@
   transform: translateY(10rem);
 }
 
+.details p {
+  padding: 0rem 2rem;
+}
 address {
-  margin-top: 5rem;
+  /* display: flex; */
+}
+
+.contact_details > p {
+  font-size: 2.5rem;
 }
 
 .details {
   display: flex;
 }
-
-.details p {
-  padding: 0 2rem;
-}
-
 .details a {
   color: white;
   padding: 0 2rem;
+  font-weight: bold;
 }
 
 .details a:hover {
   color: rgb(255, 0, 0);
+}
+
+@media only screen and (max-width: 768px) {
+  .contact_details {
+    width: 90%;
+  }
+  .contact_details > p {
+    padding: 0 0;
+    font-size: 2rem !important;
+    text-align: center;
+  }
+
+  .details a,
+  .details p {
+    font-size: 1.5rem;
+  }
 }

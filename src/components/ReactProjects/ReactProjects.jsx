@@ -74,13 +74,11 @@ const ReactProjects = () => {
           y: 0,
           scrollTrigger: {
             trigger: refs,
-            start: "bottom bottom",
-            end: "top 25%",
+            start: "top bottom",
+            end: "top 30%",
             scrub: true,
             ease: "power1.inOut",
           },
-          delay: 0.5,
-          duration: 3,
         }
       );
     });
